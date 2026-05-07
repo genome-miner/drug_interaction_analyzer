@@ -208,7 +208,7 @@ Biotechnologist and Bioinformatician
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/genome-miner/file_handling/blob/main/LICENSE).
+This project is licensed under the [MIT License](https://github.com/genome-miner/drug_interaction_analyzer/blob/main/LICENSE).
 
 ---
 <div align="center">
