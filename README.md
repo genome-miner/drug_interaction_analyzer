@@ -1,7 +1,7 @@
 # 💊 Drug Interaction Analyzer
 > **Check drug interaction risks instantly using real FDA data.**
 
-![Python](https://img.shields.io/badge/python-3.x-blue)
+![Python](https://img.shields.io/badge/python-3.10.11-blue)
 ![Requests](https://img.shields.io/badge/Library-Requests-orange)
 ![FDA API](https://img.shields.io/badge/API-OpenFDA-red)
 ![OOP](https://img.shields.io/badge/Architecture-OOP-yellow)
