@@ -91,35 +91,33 @@ class Drug():
             drug_B = json.load(x)
 
         warnings_A = drug_A.get('Warnings', [])
-        warnings_B = drug_B.get('Warnings', [])
+        
+    def comparison(self, drug_name_A, drug_name_B):
+        with open(f'{drug_name_A}.json', encoding='UTF-8') as f:
+            drug_A = json.load(f)
+        with open(f'{drug_name_B}.json', encoding='utf-8') as x:
+            drug_B = json.load(x)
 
-        if warnings_A and warnings_B:
-            return {
-                'Risk level': 'High risk',
-                'Drug_A': drug_name_A,
-                'Drug_B': drug_name_B,
-                'Drug_A data': drug_A,
-                'Drug_B data': drug_B
-            }
+        interactions_A = drug_A.get('Drug interactions', 'Not available')
+        interactions_B = drug_B.get('Drug interactions', 'Not available')
 
-        elif warnings_A or warnings_B:
-            return {
-                'Risk level': 'Moderate risk',
-                'Drug_A': drug_name_A,
-                'Drug_B': drug_name_B,
-                'Drug_A data': drug_A,
-                'Drug_B data': drug_B
-            }
+        a_mentions_b = drug_name_B in str(interactions_A).lower()
+        b_mentions_a = drug_name_A in str(interactions_B).lower()
 
+        if a_mentions_b and b_mentions_a:
+            risk = 'High risk'
+        elif a_mentions_b or b_mentions_a:
+            risk = 'Moderate risk'
         else:
-            return {
-                'Risk level': 'No interaction',
-                'Drug_A': drug_name_A,
-                'Drug_B': drug_name_B,
-                'Drug_A data': drug_A,
-                'Drug_B data': drug_B
-            }
+            risk = 'Low risk'
 
+        return {
+            'Risk level': risk,
+            'Drug_A': drug_name_A,
+            'Drug_B': drug_name_B,
+            'Drug_A data': drug_A,
+            'Drug_B data': drug_B
+        }
 
     def generate_report(self, compared_data):
         if compared_data['Risk level'] == 'High risk':
