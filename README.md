@@ -143,6 +143,11 @@ The risk level is determined by **cross-referencing official FDA drug interactio
 
 ## Sample Output
 
+> **Example Input:** Panadol and Ibuprofen
+<p align="center">
+  <img src="https://github.com/genome-miner/drug_interaction_analyzer/blob/main/Image.png?raw=true" alt="Alt text" width="850">
+</p>
+
 ## Key Concepts Demonstrated
 
 1. **REST API Integration** — Live calls to OpenFDA with dynamic query building
