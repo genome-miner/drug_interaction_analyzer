@@ -192,11 +192,9 @@ python main.py
 
 | Feature | Description |
 |---------|-------------|
-| 🖥️ GUI Interface | Tkinter or Flask web interface instead of command line |
 | 💊 Multi-drug Check | Compare more than 2 drugs simultaneously |
 | 📄 PDF Export | Save the report as a downloadable PDF |
 | 🔍 Generic Name Search | Search by generic name + brand name both |
-| 📊 History Dashboard | Visual history of all past searches |
 
 ---
 
