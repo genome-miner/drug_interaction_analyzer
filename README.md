@@ -22,6 +22,7 @@
 - [How to Run](#how-to-run)
 - [Future Roadmap](#future-roadmap)
 - [Author & Contact](#author--contact)
+- [License](#license)
 
 ---
 
